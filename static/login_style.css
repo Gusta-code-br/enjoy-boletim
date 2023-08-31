@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  height: 100vh;
+  background-color: rgba(255,255,255, 1);
+  overflow: hidden;
+  font-family: 'Montserrat';
+}
+
+.wave,
+.wave::before,
+.wave::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 250vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw rgba(64, 0, 255, 0.8);
+  animation: spin 16s infinite linear;
+  mix-blend-mode: multiply;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -125vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw #B300FF;
+  animation: spin 13s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 212, 0.8);
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+
+.frame{
+  text-align: center;
+  position: absolute;
+  width: 40%;
+  max-width: 540px;
+  min-width:40%;
+  height: 50vh;
+  margin: auto;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  /*border: 1px solid;*/
+  border-radius: 15px;
+  box-shadow: 0px 2px 15px 1px grey;
+  background-color: rgba(255,255,255, 1)
+}
+.bola {
+  height: 50px;
+  width:50px;
+  background-color: #FF00D4;
+  border-radius: 50%;
+}
+
+input[type=text]{
+  width: 70%;
+  height: 6vh;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid;
+  margin: 0px;
+  background-color: rgba(241, 241, 241, 0.4);
+margin-top: 15px;
+}
+
+button{
+  margin-top: 30px;
+  border-radius: 10px;
+  border: none;
+  width: 90px;
+  height: 45px;
+  background-color: #FF00D4;
+  color: rgba(255,255,255, 1);
+  box-shadow: 4px 4px 5px 0px #D1D1D1;
+}
+
+@keyframes init{
+  from{
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      position: absolute;
+  }
+  to {
+      height: 50px;
+  width:50px;
+  background-color: #FF00D4;
+  border-radius: 50%
+  }
+}
+.bola{
+  animation-name: init;
+  animation-duration:1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-delay: 10ms;
+  
+}
+
+#login-form {
+    animation-name: shake;
+  animation-duration:100ms;
+  animation-timing-function:linear;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-delay: 0ms;
+}
+
+@keyframes shake {
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+    opacity: 70%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@media (max-width: 900px) {
+    .frame {
+        width: 90%;
+        height: 60vh;
+        margin-bottom: 27vh;
+    }
+    input[type=text]{
+        width: 90%;
+        margin-top: 10%;
+    }
+    label {
+        padding: 20px;
+    }
+    input[type=submit]{
+        margin-top: 10%;
+    }
+}
+/*@keyframes pulsar {
+  from{
+    transform: scale(1);
+  }to{
+    transform: scale(1.02);
+  }
+}
+.frame{
+  animation: pulsar 1s alternate-reverse 0ms infinite linear;
+}
+*/
+.corpo{
+  display: inline-flex;
+}

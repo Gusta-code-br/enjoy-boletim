@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/login_style.css">
+    <title>Boletim - Enjoy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./templates/script.js"></script>
+</head>
+<body>
+    <div class="wave"></div>
+<div class="frame">
+  <div class="bola"></div>
+  <form name="Forms" method="post" action="boletim.php">
+    <label for="nome">Nome: </label>
+    <input name="nome" type="text" id="name" class="input_nome" placeholder="Digite o nome completo do aluno" required><br>
+    <label for="turma">
+    Turma
+    </label>
+    <input name="turma" id="password" type="text" placeholder="Turma" required><br>
+    <button id="btn">Entrar</button>
+  </form>
+</div>
+</body>
+</html>
